@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ASPROS · Assistant connecté</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <div>
+          <p class="eyebrow">ASSISTANT PERSONNEL CONNECTÉ</p>
+          <h1>ASPROS</h1>
+          <p class="subtitle">Le noyau de ton environnement connecté.</p>
+        </div>
+        <span id="status" class="status">Connexion…</span>
+      </header>
+
+      <section class="command-panel">
+        <label for="command">Que veux-tu faire ?</label>
+        <form id="command-form">
+          <input id="command" name="command" placeholder="Ex. allume la lampe du bureau" autocomplete="off" />
+          <button type="submit">Exécuter</button>
+        </form>
+        <p id="response" aria-live="polite">ASPROS attend ta commande.</p>
+        <div class="examples">
+          <button data-command="allume la lampe du bureau">Allumer le bureau</button>
+          <button data-command="règle la lampe du bureau à 40 %">Lumière à 40 %</button>
+          <button data-command="active le mode travail">Mode travail</button>
+          <button data-command="mode nuit">Mode nuit</button>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-title"><h2>Appareils</h2><button id="refresh" class="ghost">Actualiser</button></div>
+        <div id="devices" class="grid"><p>Chargement…</p></div>
+      </section>
+
+      <section>
+        <div class="section-title"><h2>Scènes</h2></div>
+        <div id="scenes" class="grid"></div>
+      </section>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>
